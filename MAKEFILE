@@ -1,0 +1,2 @@
+go build
+feedback-channel.exe -t OTM5NTQwNTIxODk3MDU4MzA0.Yf6VTA._yNN5ygdRIHxxxOcl44Ilj_mFh8
