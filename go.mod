@@ -1,4 +1,4 @@
-module feedback-channel
+module github.com/nfk93/feedback-channel
 
 go 1.17
 

@@ -1,10 +1,11 @@
 package main
 
 import (
-	"feedback-channel/command"
-	"feedback-channel/interactions"
 	"flag"
 	"fmt"
+
+	"github.com/nfk93/feedback-channel/command"
+	"github.com/nfk93/feedback-channel/interactions"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/go-resty/resty/v2"
