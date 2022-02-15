@@ -1,4 +1,4 @@
-package main
+package command
 
 type Command struct {
 	Id                string          `json:"id"`

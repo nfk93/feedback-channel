@@ -1,6 +1,7 @@
 package main
 
 import (
+	"feedback-channel/command"
 	"feedback-channel/interactions"
 	"flag"
 	"fmt"
@@ -23,7 +24,7 @@ func init() {
 	flag.Parse()
 }
 
-func registerSlashCommand(cmd Command) {
+func registerSlashCommand(cmd command.Command) {
 	commandClient := resty.New()
 	resp, err := commandClient.R().
 		SetHeader("Authorization", "Bot "+Token).
@@ -52,17 +53,17 @@ func main() {
 	}
 
 	if RegisterCommand {
-		cmd := Command{
+		cmd := command.Command{
 			Name:        "blep",
 			Type:        1,
 			Description: "bla",
-			Options: []CommandOption{
+			Options: []command.CommandOption{
 				{
 					Name:        "animal",
 					Description: "type of animal",
 					Type:        3,
 					Required:    true,
-					Choices: []CommandOptionChoice{
+					Choices: []command.CommandOptionChoice{
 						{
 							Name:  "dog",
 							Value: "animal_dog",
